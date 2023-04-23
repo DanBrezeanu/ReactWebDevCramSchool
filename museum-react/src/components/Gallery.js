@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Painting from './Painting'
 import Carousel from 'react-bootstrap/Carousel';
-import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 
 export default function Gallery() {
@@ -10,7 +9,7 @@ export default function Gallery() {
 
     useEffect(() => {
         console.log("hello")
-        async function fetchPictures() {
+        async function fetchPictures() {    
             setPictures((await axios.get("http://localhost:8001/paintings")).data);
         }
 
@@ -26,7 +25,7 @@ export default function Gallery() {
     })
 
     return (
-        <Carousel>
+        <Carousel variant="dark" indicators={false}>
             {items}
         </Carousel>
     )

@@ -1,17 +1,18 @@
 import React from 'react'
 
+
 export default function Painting({ data }) {
     return (    
         <>
           <img
-            className="d-block w-50 mx-auto"
+            className="d-block mx-auto formatted-image"
             src={data.image}
           />
 
           <div className="d-block text-center">
-            <p> {data.title} </p>
-            <h3> {data.name} </h3>
-            <h5> {data.year} </h5>  
+              <h2 style={{color: "black"}}> {data.title} </h2>
+              <h5> {data.name} </h5>
+              <h6> {data.year} </h6>
           </div>
         </>
     )
